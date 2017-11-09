@@ -1,0 +1,1 @@
+To run the application open the "index.html" file in any browser(preferably chrome).

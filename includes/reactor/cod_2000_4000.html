@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>High Strength Reactor Design | UASB Reactor</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="shortcut icon" href="../../assets/img/logo.png">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/main.css" />
+  <style>
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-fixed-top navbar-inverse o-nav">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a id="home" class="navbar-brand" href="../../index.html" style="color: #fff;">UASBR</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li> -->
+
+          <!-- UASBR -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UASBR <span class="caret"></span></a>
+            <ul id="notcalc" class="dropdown-menu" role="menu">
+              <li><a href="../../assets/pdf/uasbr/uasbr1.pdf" target="_blank">Background</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr2.pdf" target="_blank">Process Description</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr3.pdf" target="_blank">Advantages and Disadvantages</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr4.pdf" target="_blank">Suitable Wasterwater types</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr5.pdf" target="_blank">Operating Modes</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr6.pdf" target="_blank">Flow Sheet</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr7.pdf" target="_blank">Post Treatment</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr8.pdf" target="_blank">Cost Comparison</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr9.pdf" target="_blank">Process Performance</a></li>
+            </ul>
+          </li>
+
+          <!-- Applications -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Applications <span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/app/app1.pdf" target="_blank">Alcohol and Distillery</a></li>
+            <li><a href="../../assets/pdf/app/app2.pdf" target="_blank">Brewery</a></li>
+            <li><a href="../../assets/pdf/app/app3.pdf" target="_blank">Chemical and Petrochemical Industry</a></li>
+            <li><a href="../../assets/pdf/app/app4.pdf" target="_blank">Food and Starch Industry</a></li>
+            <li><a href="../../assets/pdf/app/app5.pdf" target="_blank">Paper Industry</a></li>
+            <li><a href="../../assets/pdf/app/app6.pdf" target="_blank">Slaughter House and Tannery</a></li>
+            <li><a href="../../assets/pdf/app/app7.pdf" target="_blank">Sugar Industry</a></li>
+            <li><a href="../../assets/pdf/app/app8.pdf" target="_blank">Sewage and Low Strength Wastewater</a></li>
+          </ul>
+        </li>
+        
+        <!-- Environmental Parameters -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Environmental Parameters <span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/env/env1.pdf" target="_blank">Ph</a></li>
+            <li><a href="../../assets/pdf/env/env2.pdf" target="_blank">Alkalinity</a></li>
+            <li><a href="../../assets/pdf/env/env3.pdf" target="_blank">VFA</a></li>
+            <li><a href="../../assets/pdf/env/env4.pdf" target="_blank">Temperature</a></li>
+            <li><a href="../../assets/pdf/env/env5.pdf" target="_blank">Suspended Solids</a></li>
+            <li><a href="../../assets/pdf/env/env6.pdf" target="_blank">Nutrients</a></li>
+            <li><a href="../../assets/pdf/env/env7.pdf" target="_blank">Trace Metal Requirements</a></li>
+            <li><a href="../../assets/pdf/env/env8.pdf" target="_blank">Toxicity</a></li>
+          </ul>
+        </li>
+        
+        <!-- Operating Parameters -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operating Parameters<span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/op/op1.pdf" target="_blank">COD conc. and BOD conc.</a></li>
+            <li><a href="../../assets/pdf/op/op2.pdf" target="_blank">OLR and SLR</a></li>
+            <li><a href="../../assets/pdf/op/op3.pdf" target="_blank">Upflow Velocity</a></li>
+            <li><a href="../../assets/pdf/op/op4.pdf" target="_blank">HRT</a></li>
+            <li><a href="../../assets/pdf/op/op5.pdf" target="_blank">Gas Production</a></li>
+            <li><a href="../../assets/pdf/op/op6.pdf" target="_blank">Mixing</a></li>
+            <li><a href="../../assets/pdf/op/op7.pdf" target="_blank">SRT</a></li>
+            <li><a href="../../assets/pdf/op/op8.pdf" target="_blank">Wastewater Characteristics</a></li>
+          </ul>
+        </li>
+        
+        <!-- Sludge Characteristics -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sludge Characteristics<span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/sld/sld1.pdf" target="_blank">Inoculum Sludge Source Characteristics</a></li>
+            <li><a href="../../assets/pdf/sld/sld2.pdf" target="_blank">Ideal Inoculum Characteristics</a></li>
+            <li><a href="../../assets/pdf/sld/sld3.pdf" target="_blank">Granulation of Biomass</a></li>
+            <li><a href="../../assets/pdf/sld/sld4.pdf" target="_blank">Characteristics of Granules</a></li>
+            <li><a href="../../assets/pdf/sld/sld5.pdf" target="_blank">Effect of Microcarriers</a></li>
+          </ul>
+        </li>
+        
+        <!-- Design Guidelines -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Design Guidelines<span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/dsg/dsg1.pdf" target="_blank">Working Out Reactor Volume</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg2.pdf" target="_blank">GSS Design</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg3.pdf" target="_blank">Feed Inlet Design</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg4.pdf" target="_blank">Effluent Collection System</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg5.pdf" target="_blank">Other Requirements</a></li>
+          </ul>
+        </li>
+        
+        <!-- Design -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Design<span class="caret"></span></a>
+          <ul id="calc" class="dropdown-menu" role="menu">
+            <li><a href="../calc/flowsheet.html">Treat Flowsheet</a></li>
+            <li><a href="" data-toggle="modal" data-target="#reactorModal" style="color: #333;">Reactor Design</a></li>
+            <li><a href="../calc/design.pdf" target="_blank">Startup Guidelines</a></li>
+            <li><a href="../calc/capacity.html">Capacity of Existing Reactor</a></li>
+            <li><a href="../calc/screen.html">Screen</a></li>
+            <li><a href="../calc/grit.html">Grit Chamber</a></li>
+            <li><a href="../calc/pst.html">P.S.T</a></li>
+            <li><a id="calc2" href="" data-toggle="modal" data-target="#aspModal" style="color: #333;">A.S.P</a></li>
+
+
+          </ul>
+        </li>
+
+        <!-- Operating Guidelines -->
+        <li>
+          <a href="" data-toggle="modal" data-target="#operationModal" style="color:white;">Operating Guidelines</a>
+        </li>
+
+        <!-- Post Treatment -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Post Treatment<span class="caret"></span></a>
+          <ul id="calc" class="dropdown-menu" role="menu">
+            <li><a id="post2" href="../post/asp.html">Activated Sludge Process</a></li>
+            <li><a id="post1" href="../post/aeration.html">Extended Aeration Process</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="" data-toggle="modal" data-target="#help_modal" style="color:white;">Help</a>
+        </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  <div class="container row">
+    <div id="content" class="row">
+      <div class="col-md-12 modify-main-col">
+        <div class="panel panel-default card shadow--2dp">
+          <div class="panel-heading o-nav">
+            <h3 class="panel-title">High Strength Reactor Design <code> COD between 2000 mg/L and 4000 mg/L</code></h3>
+          </div>
+          <div class="panel-body">
+            <div class="container modify-container">
+              <div class="row row-eq-height">
+                <div class="col-md-4 border-rgt">
+                  <h4 class="input">Input Parameters</h4>
+                   <form class="form-horizontal">
+
+                    <div class="form-group">
+                      <label class="col-md-6 control-label">Inflow (cum/d):</label>
+                      <div class="col-md-4">
+                        <input class="form-control" type="number" name="" id="inflow">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-6 control-label">COD (mg/L):</label>
+                      <div class="col-md-4">
+                        <input class="form-control" type="number" name="" id="cod">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="col-md-6 control-label" style="padding-right: 0;">Temperature (Degree C):</label>
+                      <div class="col-md-4 tooltip-wide">
+                        <input class="form-control" type="number" name="" id="temp" data-toggle="tooltip" data-placement="right" title="You should enter average temperature of wastewater during winter season.">
+                      </div>
+                    </div>
+
+                    <div class="form-group" id="r_shape">
+                      <label for="" class="col-md-6 control-label">Shape of Reactor:</label>
+                      <div class="col-md-6" id="rd">
+                        <input type="radio" name="shape" value="1" checked="checked">Rectangular<br>
+                        <input type="radio" name="shape" value="2">Circular
+                      </div>
+                    </div>
+
+                    <div class="col-md-12 text-center">
+                      <button type="button" class="btn btn-success" onclick="cod_2000_4000()">Calculate</button><br>
+                      <button type="button" class="btn btn-success disb" data-toggle="modal" data-target="#gssd_modal" onclick="gss_design()" disabled="disabled">G.S.S. Design</button><br>
+                      <button type="button" class="btn btn-success disb" data-toggle="modal" data-target="#start_modal" disabled="disabled" onclick="startup_clear()">Start-up</button><br>
+                      <button type="button" class="btn btn-success disb" data-toggle="modal" data-target="#estimate_modal" disabled="disabled" onclick="estimate_clear()">Estimate</button><br>
+                      <button type="button" class="btn btn-success disb" onclick="savePDF()" disabled="disabled">Save</button><br>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="col-md-8">
+                  <h4 class="input">Recomendation</h4>
+                  
+                  <div class="col-md-6" style="border-right: 1px solid black;">
+                    <form class="form-horizontal result_form">
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Volume(cum):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="vol">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Area(sqm):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="area">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">HRT(hrs):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="hrt">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">OLR(kg COD/cum day):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="olr1">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">SLR(kg COD/kg VSS day):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="slr">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Upflow Velocity(m/hr):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="upv">
+                        </div>
+                      </div>
+
+                      <hr>
+                      <h4 class="input" style="font-size: 16px; font-weight: bold; color: #449d44;">Reator Dimensions</h4>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Number of Units:</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="nou">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Height(m) without free board:</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="height">
+                        </div>
+                      </div>
+
+                      <div class="r_cyes">
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Length(m):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="length">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Width(m):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="width">
+                        </div>
+                      </div>
+                      </div>
+
+                      <div class="form-group r_ryes" style="display: none;">
+                        <label for="inflow" class="col-md-8 control-label">Diameter(m):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="dia">
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+
+                  <div class="col-md-6">
+                    <form class="form-horizontal result_form">
+
+                      <h4 class="input" style="font-size: 16px; font-weight: bold; color: #449d44;">Expected Performance</h4>
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Methane Production (cum/d):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="meth_prod">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Power Production (kW):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="power">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Efficiency (%) :</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="text" name="" id="efficiency">
+                        </div>
+                      </div>
+
+                      <hr>
+                      <h4 class="input" style="font-size: 16px; font-weight: bold; color: #449d44;">Inflow Arrangement</h4>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Main Pipe diameter (Inches):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="main_dia">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">Lateral Diameter (Inches):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="lat_dia">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="inflow" class="col-md-8 control-label">No. of Laterals:</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="nolat">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label id="hdsw" for="inflow" class="col-md-8 control-label">Sublateral Diameter (Inches):</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="nozd">
+                        </div>
+                      </div>
+
+                      <div class="form-group" style="display: none;" id="noofnoz">
+                        <label id="hdsw" for="inflow" class="col-md-8 control-label">Number of Nozzles/ Lateral:</label>
+                        <div class="col-md-4">
+                          <input class="form-control" type="number" name="" id="nonoze">
+                        </div>
+                      </div>
+
+                      <div id="strFilter"></div>
+
+                    </form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <script src="../../assets/js/jquery-2.1.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/cod.js"></script>
+    <script src="../../assets/js/jspdf.min.js"></script>
+
+    <!--  Custom Scripts-->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $("#lt").click(function() {
+        $("#lit").toggleClass("show");
+        $("#lt").toggleClass("btn-color-change");
+        $("#lt").toggleClass("btn-info");
+        $("#ow").toggleClass("hide");
+      });
+      $("#operation").click(function() {
+        if($('#checkbox1').is(':checked'))
+          localStorage.setItem("effk", "1");
+        if($('#checkbox2').is(':checked'))
+          localStorage.setItem("foamk", "1");
+        if($('#checkbox3').is(':checked'))
+          localStorage.setItem("ssfoamk", "1");
+        if($('#checkbox4').is(':checked'))
+          localStorage.setItem("gask", "1");
+        if($('#checkbox5').is(':checked'))
+          localStorage.setItem("feedk", "1");
+        if($('#checkbox6').is(':checked'))
+          localStorage.setItem("sludgek", "1");
+      });
+
+      $('#r_shape input[type="radio"]').click(function(){
+        if($(this).attr("value") == 1){
+          $(".r_cyes").show();
+          $(".r_ryes").hide(); 
+        }
+        if($(this).attr("value")== 2){
+          $(".r_ryes").show();
+          $(".r_cyes").hide();
+        }
+      });
+      $('#wall_material input[type="radio"]').click(function(){
+        if($(this).attr("value") == 1){
+          $(".wall_rcc").show();
+          $(".wall_plate").hide();
+        }
+        if($(this).attr("value")== 2){
+          $(".wall_plate").show();
+          $(".wall_rcc").hide();
+        }
+      });
+      $('#gss_material input[type="radio"]').click(function(){
+        if($(this).attr("value") == 1){
+          $(".gss_steel").show();
+          $(".gss_ppl").hide();
+        }
+        if($(this).attr("value")== 2){
+          $(".gss_ppl").show();
+          $(".gss_steel").hide();
+        }
+      });
+      $('[data-toggle="tooltip"]').tooltip();
+
+    });
+
+    </script>
+
+    <!-- ASP modal -->
+    <div id="aspModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Design OF</h4>
+          </div>
+          <div class="modal-body">
+            <form id="reactor" name="" class="form-horizontal">
+              <a id="ow" href="../post/asp.html" class="btn btn-info">Low Retention</a>
+              <b style="padding-left:5px; padding-right: 5px;">OR</b>
+              <a id="ow" href="../post/aeration.html" class="btn btn-info">Extented Aeration</a>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Reactor modal -->
+    <div id="reactorModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Design Based On</h4>
+          </div>
+          <div class="modal-body">
+            <form id="reactor" name="" class="form-horizontal">
+              <button id="lt" type="button" class="btn btn-info" style="width: 200px;">Literature Recomendations</button>
+              <b style="padding-left:5px; padding-right: 5px;">OR</b>
+              <a href="own_reactor.html" class="btn btn-info">Your Own Loadings</a>
+              
+              <div class="form-group lit" id="lit" style="display: none;">
+              <p style="padding-left: 25px; margin-top: 9px; color: #153e15; font-size: 16px;">Select correct option depending upon COD range</p>
+                <ul>
+                  <li><a href="cod_500.html">Very Low Strength (COD upto 500 mg/L)</a></li>
+                  <li><a href="cod_500_750.html">Low Strength (COD between 500 to 750 mg/L)</a></li>
+                  <li><a href="cod_750_2000.html">Medium Strength (COD between 750 to 2,000 mg/L)</a></li>
+                  <li><a href="#">High Strength (COD between 2,000 to 4,000 mg/L)</a></li>
+                  <li><a href="cod_4000_10000.html">Very High Strength (COD between 4,000 to 10,000 mg/L)</a></li>
+                  <li><a href="cod_10000.html">Extremely High Strength (COD greater than 10,000 mg/L)</a></li>
+                </ul>
+              </div>
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Operation modal -->
+    <div id="operationModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">What are the problems of your reactor?</h4>
+          </div>
+          <div class="modal-body">
+            <form id="reactor" name="" class="form-horizontal">    
+              <input type="checkbox" id="checkbox1" checked=""> Lowering of Efficiency<br>
+              <input type="checkbox" id="checkbox2"> Excessive Foaming<br>
+              <input type="checkbox" id="checkbox3"> Excessive S.S. in Foaming<br>
+              <input type="checkbox" id="checkbox4"> Lower Gas Production<br>
+              <input type="checkbox" id="checkbox5"> No Feed Condition<br>
+              <input type="checkbox" id="checkbox6"> Sludge Waste Scheduling<br><br>
+              <a id="operation" href="../operation/operation.html" type="button" class="btn btn-success">Next</a>
+            </form>
+            <hr>
+            <p>
+              If your problems remains unsolved even after the application of reccomendations given by software then please contact <b>Dr. M.M. Ghangrekar</b> at <a>m_ghangrekar@rediffmail.com</a>.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Help modal -->
+    <div id="help_modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Help</h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>In all design forms enter all input values carefully with proper unit and then click <code>Calculate</code> button to get an output results.</li>          </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="gssd_modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">G.S.S. Design</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row row-eq-height">
+              <div class="col-md-6" style="border-right: 1px solid black;">
+                <div class="image-text">
+                  <img class="img-responsive" src="../../assets/img/gssd.png">
+                  <span id="gss_lbht" style="position:absolute; top: 150px;"></span>
+                  <span id="lwt" style="position:absolute;top: 33px;left: 147px;"></span>
+                  <span id="lba" style="position:absolute;top: 320px;left: 110px;"></span>
+                  <span id="laun_h" style="position:absolute; top: 103px;right: 66px;"></span>
+                  <span id="laun_b" style="position:absolute;top: 138px;right: 132px;"></span>
+                  <span id="gss_lbw" style="position:absolute; top: 280px;left: 143px;"></span>
+                  <span id="lbapw" style="position:absolute;top: 245px;right: 119px;"></span>
+                  <span id="lblDeflectorHeight" style="position:absolute;top: 305px;right: 165px;"></span>
+                  <span id="lbdef" style="position:absolute;top: 339px;right: 122px;"></span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <form class="form-horizontal">
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Number of Cones/Layer:</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="nocone_c">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Number of Layers:</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="layer">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Width of Main Launder (m):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="ml_w">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Depth of Main Launder (m):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="ml_h">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Bed Slope of Main Launder:</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="text" name="" id="slope">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Number of Effluent Launders /Unit :</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="nolaunder">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="start_modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Start-up</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row row-eq-height">
+              <div class="col-md-6" style="border-right: 1px solid black;">
+                <h4 class="input">Input Parameters</h4>
+                <form class="form-horizontal">
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">COD of dilution water (mg/L):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="dilcod">
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-success" onclick="startup_reactor()">Calculate</button>
+
+                </form>
+              </div>
+              <div class="col-md-6">
+                <h4 class="input">Recomendation for Start-up</h4>
+                <form class="form-horizontal">
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Inflow (cum/day):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="inflow1">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Inflow of Dilution water (cum/day):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="dilinflow">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">HRT (hrs):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="hrt1">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">OLR (kgCoD/cum day):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="olr2">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Upflow Velocity (m/hr):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="upv1">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div id="estimate_modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Estimation</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row row-eq-height">
+              <div class="col-md-8" style="border-right: 1px solid black;">
+                <h4 class="input">Enter Current rates in Rs. only</h4>
+                <form class="form-horizontal">
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">P.C.C (per cum):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="rate_pcc">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Material for Construction of walls of UASBR:</label>
+                    <div class="col-md-4" id="wall_material">
+                      <input type="radio" name="wall_mat" value="1" checked="checked">R.C.C
+                      <input type="radio" name="wall_mat" value="2">M.S. Plates
+                    </div>
+                  </div>
+
+                  <div class="form-group wall_plate" style="display: none;">
+                    <label class="col-md-8 control-label">Thickness of M.S. Plate (mm):</label>
+                    <div class="col-md-4">
+                      <select class="form-control" id="plate_thickness">
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group wall_rcc">
+                    <label class="col-md-8 control-label">RCC (per cum):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="rate_walls">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Steel (per kg):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="rate_steel">
+                    </div>
+                  </div>
+
+                  <div class="form-group wall_rcc">
+                    <label class="col-md-8 control-label">Plastering (per sqm):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="PlasteringRate">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Excavation (per cum):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="ExcavationRate">
+                    </div>
+                  </div>
+
+                  <div class="form-group wall_rcc">
+                    <label class="col-md-8 control-label">Rate of Formwork (per sqm):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="FormWorkRate">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Material of Sheets to be used for G.S.S.:</label>
+                    <div class="col-md-4" id="gss_material">
+                      <input type="radio" name="gss_mat" value="1" checked="checked">Steel
+                      <input type="radio" name="gss_mat" value="2">Ploypropylene
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Thickness of Plates in G.S.S. (mm):</label>
+                    <div class="col-md-4">
+                      <select class="form-control" id="gss_thickness">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group gss_ppl" style="display: none;">
+                    <label class="col-md-8 control-label">Rate of Ploypropylene (per sqm):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="txtRatePropy">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-8 control-label">Rate of water Proofing (per sqm):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="WaterProofingRate">
+                    </div>
+                  </div>
+
+                  <div class="form-group gss_steel">
+                    <label class="col-md-8 control-label">Rate of Anti-corrosion Coating (per sqm):</label>
+                    <div class="col-md-4">
+                      <input class="form-control" type="number" name="" id="AntiCorrosionRate">
+                    </div>
+                  </div>
+
+                  <button type="button" class="btn btn-success" onclick="gss_estimate()">Calculate</button>
+
+                </form>
+              </div>
+              <div class="col-md-5">
+                <h4 class="input">Recomendation for Start-up</h4>
+                <form class="form-horizontal">
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">P.C.C. (Rs):</label>
+                    <div class="col-md-6">
+                      <input class="form-control" type="number" name="" id="tcost_pcc">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">Reactor (Rs):</label>
+                    <div class="col-md-6">
+                      <input class="form-control" type="number" name="" id="tcost_reactor">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label">GSS (Rs):</label>
+                    <div class="col-md-6">
+                      <input class="form-control" type="number" name="" id="tcost_gss">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="col-md-6 control-label"><b>Total Cost (Rs):</b></label>
+                    <div class="col-md-6">
+                      <input class="form-control" type="number" name="" id="total_cost">
+                    </div>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Error modal -->
+    <div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Message</h4>
+          </div>
+          <div class="modal-body" style="color: red;">
+            <div id="error"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.Error modal -->
+  </footer>
+
+</body>
+</html>

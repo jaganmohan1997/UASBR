@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Activated Sludge Process | UASB Reactor</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="shortcut icon" href="../../assets/img/logo.png">
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" type="text/css" href="../../assets/css/main.css" />
+  <style>
+  </style>
+</head>
+<body>
+  
+  <nav class="navbar navbar-fixed-top navbar-inverse o-nav">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a id="home" class="navbar-brand" href="../../index.html" style="color: #fff;">UASBR</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!-- <li class="active"><a href="#"><span class="sr-only">(current)</span></a></li> -->
+
+          <!-- UASBR -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">UASBR <span class="caret"></span></a>
+            <ul id="notcalc" class="dropdown-menu" role="menu">
+              <li><a href="../../assets/pdf/uasbr/uasbr1.pdf" target="_blank">Background</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr2.pdf" target="_blank">Process Description</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr3.pdf" target="_blank">Advantages and Disadvantages</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr4.pdf" target="_blank">Suitable Wasterwater types</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr5.pdf" target="_blank">Operating Modes</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr6.pdf" target="_blank">Flow Sheet</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr7.pdf" target="_blank">Post Treatment</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr8.pdf" target="_blank">Cost Comparison</a></li>
+              <li><a href="../../assets/pdf/uasbr/uasbr9.pdf" target="_blank">Process Performance</a></li>
+            </ul>
+          </li>
+
+          <!-- Applications -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Applications <span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/app/app1.pdf" target="_blank">Alcohol and Distillery</a></li>
+            <li><a href="../../assets/pdf/app/app2.pdf" target="_blank">Brewery</a></li>
+            <li><a href="../../assets/pdf/app/app3.pdf" target="_blank">Chemical and Petrochemical Industry</a></li>
+            <li><a href="../../assets/pdf/app/app4.pdf" target="_blank">Food and Starch Industry</a></li>
+            <li><a href="../../assets/pdf/app/app5.pdf" target="_blank">Paper Industry</a></li>
+            <li><a href="../../assets/pdf/app/app6.pdf" target="_blank">Slaughter House and Tannery</a></li>
+            <li><a href="../../assets/pdf/app/app7.pdf" target="_blank">Sugar Industry</a></li>
+            <li><a href="../../assets/pdf/app/app8.pdf" target="_blank">Sewage and Low Strength Wastewater</a></li>
+          </ul>
+        </li>
+        
+        <!-- Environmental Parameters -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Environmental Parameters <span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/env/env1.pdf" target="_blank">Ph</a></li>
+            <li><a href="../../assets/pdf/env/env2.pdf" target="_blank">Alkalinity</a></li>
+            <li><a href="../../assets/pdf/env/env3.pdf" target="_blank">VFA</a></li>
+            <li><a href="../../assets/pdf/env/env4.pdf" target="_blank">Temperature</a></li>
+            <li><a href="../../assets/pdf/env/env5.pdf" target="_blank">Suspended Solids</a></li>
+            <li><a href="../../assets/pdf/env/env6.pdf" target="_blank">Nutrients</a></li>
+            <li><a href="../../assets/pdf/env/env7.pdf" target="_blank">Trace Metal Requirements</a></li>
+            <li><a href="../../assets/pdf/env/env8.pdf" target="_blank">Toxicity</a></li>
+          </ul>
+        </li>
+        
+        <!-- Operating Parameters -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Operating Parameters<span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/op/op1.pdf" target="_blank">COD conc. and BOD conc.</a></li>
+            <li><a href="../../assets/pdf/op/op2.pdf" target="_blank">OLR and SLR</a></li>
+            <li><a href="../../assets/pdf/op/op3.pdf" target="_blank">Upflow Velocity</a></li>
+            <li><a href="../../assets/pdf/op/op4.pdf" target="_blank">HRT</a></li>
+            <li><a href="../../assets/pdf/op/op5.pdf" target="_blank">Gas Production</a></li>
+            <li><a href="../../assets/pdf/op/op6.pdf" target="_blank">Mixing</a></li>
+            <li><a href="../../assets/pdf/op/op7.pdf" target="_blank">SRT</a></li>
+            <li><a href="../../assets/pdf/op/op8.pdf" target="_blank">Wastewater Characteristics</a></li>
+          </ul>
+        </li>
+        
+        <!-- Sludge Characteristics -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sludge Characteristics<span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/sld/sld1.pdf" target="_blank">Inoculum Sludge Source Characteristics</a></li>
+            <li><a href="../../assets/pdf/sld/sld2.pdf" target="_blank">Ideal Inoculum Characteristics</a></li>
+            <li><a href="../../assets/pdf/sld/sld3.pdf" target="_blank">Granulation of Biomass</a></li>
+            <li><a href="../../assets/pdf/sld/sld4.pdf" target="_blank">Characteristics of Granules</a></li>
+            <li><a href="../../assets/pdf/sld/sld5.pdf" target="_blank">Effect of Microcarriers</a></li>
+          </ul>
+        </li>
+        
+        <!-- Design Guidelines -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Design Guidelines<span class="caret"></span></a>
+          <ul id="notcalc" class="dropdown-menu" role="menu">
+            <li><a href="../../assets/pdf/dsg/dsg1.pdf" target="_blank">Working Out Reactor Volume</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg2.pdf" target="_blank">GSS Design</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg3.pdf" target="_blank">Feed Inlet Design</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg4.pdf" target="_blank">Effluent Collection System</a></li>
+            <li><a href="../../assets/pdf/dsg/dsg5.pdf" target="_blank">Other Requirements</a></li>
+          </ul>
+        </li>
+        
+        <!-- Design -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Design<span class="caret"></span></a>
+          <ul id="calc" class="dropdown-menu" role="menu">
+            <li><a href="../calc/flowsheet.html">Treat Flowsheet</a></li>
+            <li><a href="" data-toggle="modal" data-target="#reactorModal" style="color: #333;">Reactor Design</a></li>
+            <li><a href="../calc/design.pdf" target="_blank">Startup Guidelines</a></li>
+            <li><a href="../calc/capacity.html">Capacity of Existing Reactor</a></li>
+            <li><a href="../calc/screen.html">Screen</a></li>
+            <li><a href="../calc/grit.html">Grit Chamber</a></li>
+            <li><a href="../calc/pst.html">P.S.T</a></li>
+            <li><a id="calc2" href="" data-toggle="modal" data-target="#aspModal" style="color: #333;">A.S.P</a></li>
+
+
+          </ul>
+        </li>
+
+        <!-- Operating Guidelines -->
+        <li>
+          <a href="" data-toggle="modal" data-target="#operationModal" style="color:white;">Operating Guidelines</a>
+        </li>
+
+        <!-- Post Treatment -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Post Treatment<span class="caret"></span></a>
+          <ul id="calc" class="dropdown-menu" role="menu">
+            <li><a id="post2" href="#">Activated Sludge Process</a></li>
+            <li><a id="post1" href="aeration.html">Extended Aeration Process</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="" data-toggle="modal" data-target="#help_modal" style="color:white;">Help</a>
+        </li>
+
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  
+  <div class="container row">
+    <div id="content" class="row">
+      <div class="col-md-12 modify-main-col">
+				<div class="panel panel-default card shadow--2dp">
+				  <div class="panel-heading o-nav">
+				    <h3 class="panel-title">Activated Sludge Process <code>0.2 < F/M < 0.5</code></h3>
+				  </div>
+				  <div class="panel-body">
+						<div class="container modify-container">
+					    <div class="row row-eq-height">
+					      <div class="col-md-6 border-rgt">
+					        <h4 class="input">Input Parameters</h4>
+						      <form id="screen" name="sreen" class="form-horizontal">
+
+						        <div class="form-group">
+						          <label class="col-sm-8 control-label">Inflow(cum/d):</label>
+						          <div class="col-sm-4">
+						            <input class="form-control" type="number" name="" id="inflow">
+						          </div>
+						        </div>
+
+						        <div class="form-group">
+						          <label class="col-sm-8 control-label">Influent BOD(mg/L):</label>
+						          <div class="col-sm-4">
+						            <input class="form-control" type="number" name="" id="in_bod">
+						          </div>
+						        </div>
+
+						        <div class="form-group">
+						          <label class="col-sm-8 control-label">Required Effluent BOD(mg/L):</label>
+						          <div class="col-sm-4">
+						            <input class="form-control" type="number" name="" id="ef_bod">
+						          </div>
+						        </div>
+
+						        <button type="button" class="btn btn-success" onclick="post_asp()">Calculate</button>
+						        </form>
+                    <button style="width: 150px;" type="button" class="btn btn-success" onclick="optimize_post('asp')">Use Optimization</button>
+						      </div>
+						      <div class="col-md-6">
+						      <h4 class="input">Output</h4>
+					        <form class="form-horizontal result_form">
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Efficiency (%):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="efficiency" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Reactor Volume (cum):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="vol" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">HRT (h):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="hrt" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">F/M Ratio (kg BOD/kg VSS-d):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="fm" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Volumetric loading (kg BOD/cum-d):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="vol_loading" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Quantity of sludge waste (kg SS/d):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="sludge_waste" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Sludge waste volume based on MCRT(cum/d):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="q_w" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Recirculation ratio:</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="rec_ratio" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Oxygen Required(kg O<sub>2</sub>/day):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="req_oxygen" >
+					            </div>
+					          </div>
+
+					          <div class="form-group">
+					            <label class="col-md-8 control-label">Air requirement (cum/min):</label>
+					            <div class="col-md-4">
+					              <input class="form-control" type="number" name="" id="air_req" >
+					            </div>
+					          </div>
+
+					        </form>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+    </div>
+  </div>
+  <footer>
+    <script>
+function renderOptimization() {
+
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,  
+    title:{
+      text: "Volume vs MCRT"
+    },
+    axisY: {
+      title: "Volume ",
+      valueFormatString: "#0,,.",
+      suffix: "m3"
+    },
+    axisX: {
+      title: "Mean Cell Residence Time (days) "
+    },
+    data: [{
+      yValueFormatString: "#,### Units",
+      xValueFormatString: "YYYY",
+      type: "spline",
+      dataPoints: [
+        {x: new Date(2002, 0), y: 2506000},
+        {x: new Date(2003, 0), y: 2798000},
+        {x: new Date(2004, 0), y: 3386000},
+        {x: new Date(2005, 0), y: 6944000},
+        {x: new Date(2006, 0), y: 6026000},
+        {x: new Date(2007, 0), y: 2394000},
+        {x: new Date(2008, 0), y: 1872000},
+        {x: new Date(2009, 0), y: 2140000},
+        {x: new Date(2010, 0), y: 7289000},
+        {x: new Date(2011, 0), y: 4830000},
+        {x: new Date(2012, 0), y: 2009000},
+        {x: new Date(2013, 0), y: 2840000},
+        {x: new Date(2014, 0), y: 2396000},
+        {x: new Date(2015, 0), y: 1613000},
+        {x: new Date(2016, 0), y: 2821000},
+        {x: new Date(2017, 0), y: 2000000}
+      ]
+    }]
+  });
+  chart.render();
+
+}
+
+</script>
+    <script src="../../assets/js/jquery-2.1.1.min.js"></script>
+    <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/post.js"></script>
+    <script src="../../assets/js/canvasjs.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("#lt").click(function() {
+        $("#lit").toggleClass("show");
+        $("#lt").toggleClass("btn-color-change");
+        $("#lt").toggleClass("btn-info");
+        $("#ow").toggleClass("hide");
+      });
+      $("#operation").click(function() {
+        if($('#checkbox1').is(':checked'))
+          localStorage.setItem("effk", "1");
+        if($('#checkbox2').is(':checked'))
+          localStorage.setItem("foamk", "1");
+        if($('#checkbox3').is(':checked'))
+          localStorage.setItem("ssfoamk", "1");
+        if($('#checkbox4').is(':checked'))
+          localStorage.setItem("gask", "1");
+        if($('#checkbox5').is(':checked'))
+          localStorage.setItem("feedk", "1");
+        if($('#checkbox6').is(':checked'))
+          localStorage.setItem("sludgek", "1");
+      });
+    });
+    </script>
+
+    <!-- ASP modal -->
+    <div id="aspModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Design OF</h4>
+          </div>
+          <div class="modal-body">
+            <form id="reactor" name="" class="form-horizontal">
+              <a id="ow" href="asp.html" class="btn btn-info">Low Retention</a>
+              <b style="padding-left:5px; padding-right: 5px;">OR</b>
+              <a id="ow" href="aeration.html" class="btn btn-info">Extented Aeration</a>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Optimization modal -->
+    <div id="optimize" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Optimization Graph</h4>
+          </div>
+          <div class="modal-body">
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Reactor modal -->
+    <div id="reactorModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Design Based On</h4>
+          </div>
+          <div class="modal-body">
+            <form id="reactor" name="" class="form-horizontal">
+              <button id="lt" type="button" class="btn btn-info" style="width: 200px;">Literature Recomendations</button>
+              <b style="padding-left:5px; padding-right: 5px;">OR</b>
+              <a id="ow" href="../reactor/own_reactor.html" type="button" class="btn btn-info">Your Own Loadings</a>
+              
+              <div class="form-group lit" id="lit" style="display: none;">
+              <p style="padding-left: 25px; margin-top: 9px; color: #153e15; font-size: 16px;">Select correct option depending upon COD range</p>
+                <ul>
+                  <li><a href="../reactor/cod_500.html">Very Low Strength (COD upto 500 mg/L)</a></li>
+                  <li><a href="../reactor/cod_500_750.html">Low Strength (COD between 500 to 750 mg/L)</a></li>
+                  <li><a href="../reactor/cod_750_2000.html">Medium Strength (COD between 750 to 2,000 mg/L)</a></li>
+                  <li><a href="../reactor/cod_2000_4000.html">High Strength (COD between 2,000 to 4,000 mg/L)</a></li>
+                  <li><a href="../reactor/cod_4000_10000.html">Very High Strength (COD between 4,000 to 10,000 mg/L)</a></li>
+                  <li><a href="../reactor/cod_10000.html">Extremely High Strength (COD greater than 10,000 mg/L)</a></li>
+                </ul>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Operation modal -->
+    <div id="operationModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">What are the problems of your reactor?</h4>
+          </div>
+          <div class="modal-body">
+            <form id="reactor" name="" class="form-horizontal">    
+              <input type="checkbox" id="checkbox1" checked=""> Lowering of Efficiency<br>
+              <input type="checkbox" id="checkbox2"> Excessive Foaming<br>
+              <input type="checkbox" id="checkbox3"> Excessive S.S. in Foaming<br>
+              <input type="checkbox" id="checkbox4"> Lower Gas Production<br>
+              <input type="checkbox" id="checkbox5"> No Feed Condition<br>
+              <input type="checkbox" id="checkbox6"> Sludge Waste Scheduling<br><br>
+              <a id="operation" href="../operation/operation.html" type="button" class="btn btn-success">Next</a>
+            </form>
+            <hr>
+            <p>
+              If your problems remains unsolved even after the application of reccomendations given by software then please contact <b>Dr. M.M. Ghangrekar</b> at <a>m_ghangrekar@rediffmail.com</a>.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Help modal -->
+    <div id="help_modal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Help</h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>In all design forms enter all input values carefully with proper unit and then click <code>Calculate</code> button to get an output results.</li>          </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Error modal -->
+    <div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Message</h4>
+          </div>
+          <div class="modal-body" style="color: red;">
+            <div id="error"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Back</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.Error modal -->
+
+    <!-- Loading modal -->
+    <div id="loading" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Please Wait ... </h4>
+          </div>
+          <div class="progress progress-striped active" style="margin-bottom:0;">
+            <div class="progress-bar" style="width: 100%">
+              
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.Loading modal -->
+  </footer>
+</body>
+</html>
