@@ -35,35 +35,35 @@ function post_asp(){
 		$('#loading').modal('show');
 		var DataArray = [];
 		// alert('Double For loop STarts');
-		for (var i = 5; i < 16; i++) {
+		for (var i = 5; i < 16; i++) { // `i` is alias of MCRT (days)
 			var graphDataArray = [];
-			for (count = 3000; count < 6001; count++ )//Count is alias of X (MLVSS)
+			for (count = 3000; count < 6001; count++ )//`count` is alias of X (MLVSS)
 			 {
 				graphDataArray.push(
 					{"x": count ,"y": ((inflow*i*y*(in_bod - ef_bod)) / (count*(1 + kd*i)))}
-					);
+					); //Create an object of (x,y) points whose set is used in CanvasJS
 				count = count + 99;
 			}
-			DataArray.push(graphDataArray);
+			DataArray.push(graphDataArray); //Data Array is a collection of set of such points
 		}
 		$('#loading').modal('hide');
 
 		$('#optimize').modal('show');
 
-		renderGraph(DataArray);
+		renderGraph(DataArray, 'asp');
 		var res = [];
 		var obj = [];
-		for (var i = 0; i < DataArray.length; i++) {
-			res[i] = Math.min.apply(Math,DataArray[i].map(function(o){return o.y;}));
-			obj[i] = DataArray[i].find(function(o){ return o.y == res[i]; });
+		for (var i = 0; i < DataArray.length; i++) { //Each set has a minimum
+			res[i] = Math.min.apply(Math,DataArray[i].map(function(o){return o.y;})); //Obtain the minimum value of volume in each set
+			obj[i] = DataArray[i].find(function(o){ return o.y == res[i]; }); //Obtain the object with minimum volume in each set
 		}
-		var finalRes = Math.min.apply(Math,obj.map(function(o){return o.y;}));
-		var finalObj = obj.find(function(o){ return o.y == finalRes; });
+		var finalRes = Math.min.apply(Math,obj.map(function(o){return o.y;})); //Minimum volume from the set of minimum values 
+		var finalObj = obj.find(function(o){ return o.y == finalRes; }); //Respective Object is obtained
 		x = finalObj['x'];
 		vol = finalObj['y'];
 		for (var i = 0; i < obj.length; i++) {
 			if (obj[i]['x'] == x && obj[i]['y'] == vol ) {
-				var flag = i;
+				var flag = i; //Respective MCRT is obtained
 			}
 		}
 		mcrt = flag + 5;
@@ -155,14 +155,51 @@ function post_extended(){
 	// Assumptions
 	n_var = 0.7; // n_var = mlvss/mlss
 	ss = 10000;
-	x = 2800; // MLVSS in aeration tank
-	mcrt = 30; //20-30 days
 
 	efficiency = ((in_bod - ef_bod) / in_bod) * 100;
 
 	kd = 0.07;
 	y = 0.6;
-	vol = (inflow*mcrt*y*(in_bod - ef_bod)) / (x*(1 + kd*mcrt));
+	if (!optimizePostExtended) {
+		mcrt = 30; // 20 to 30 days
+		x = 2800; // MLVSS in aeration tank
+		vol = ((inflow*mcrt*y*(in_bod - ef_bod)) / (x*(1 + kd*mcrt)));
+	}else if (optimizePostExtended){
+		$('#loading').modal('show');
+		var DataArray = [];
+		for (var i = 20; i < 31; i++) {
+			var graphDataArray = [];
+			for (count = 3000; count < 6001; count++ )//Count is alias of X (MLVSS)
+			 {
+				graphDataArray.push(
+					{"x": count ,"y": ((inflow*i*y*(in_bod - ef_bod)) / (count*(1 + kd*i)))}
+					);
+				count = count + 99;
+			}
+			DataArray.push(graphDataArray);
+		}
+		$('#loading').modal('hide');
+
+		$('#optimize').modal('show');
+
+		renderGraph(DataArray,'extended');
+		var res = [];
+		var obj = [];
+		for (var i = 0; i < DataArray.length; i++) {
+			res[i] = Math.min.apply(Math,DataArray[i].map(function(o){return o.y;}));
+			obj[i] = DataArray[i].find(function(o){ return o.y == res[i]; });
+		}
+		var finalRes = Math.min.apply(Math,obj.map(function(o){return o.y;}));
+		var finalObj = obj.find(function(o){ return o.y == finalRes; });
+		x = finalObj['x'];
+		vol = finalObj['y'];
+		for (var i = 0; i < obj.length; i++) {
+			if (obj[i]['x'] == x && obj[i]['y'] == vol ) {
+				var flag = i;
+			}
+		}
+		mcrt = flag + 20;
+	}
 
 	hrt = (vol*24) / inflow;
 	do{
@@ -174,7 +211,7 @@ function post_extended(){
 			vol = vol * 1.05;
 			hrt = (vol*24) / inflow;
 		}
-	}while(hrt < 18 && hrt > 36)
+	}while(hrt < 18 || hrt > 36)
 
 	fm = (inflow*in_bod) / (vol*x);
 	if(fm < 0.05 || fm > 0.2){
@@ -238,7 +275,14 @@ function optimize_post(x){
 
 }
 
-function renderGraph(DataArray){
+function renderGraph(DataArray, process){
+	if (process == 'asp') {
+		var mcrtValues = [5,6,7,8,9,10,11,12,13,14,15];
+		var mcrtName = "MCRT = 5";
+	}else if (process == 'extended') {
+		var mcrtValues = [20,21,22,23,24,25,26,27,28,29,30];
+		var mcrtName = "MCRT = 20";
+	}
 	var chart = new CanvasJS.Chart("chartContainer", {
 	  animationEnabled: true,  
 	  title:{
@@ -259,7 +303,7 @@ function renderGraph(DataArray){
 			shared: true
 		},
 	  data: [{
-	  	name: "MCRT = 5",
+	  	name: mcrtName,
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -267,7 +311,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[0]
 	  },
 	  {
-	  	name: "6",
+	  	name: mcrtValues[1].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -275,7 +319,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[1]
 	  },
 	  {
-	  	name: "7",
+	  	name: mcrtValues[2].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -283,7 +327,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[2]
 	  },
 	  {
-	  	name: "8",
+	  	name: mcrtValues[3].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -291,7 +335,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[3]
 	  },
 	  {
-	  	name: "9",
+	  	name: mcrtValues[4].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -299,7 +343,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[4]
 	  },
 	  {
-	  	name: "10",
+	  	name: mcrtValues[5].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -307,7 +351,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[5]
 	  },
 	  {
-	  	name: "11",
+	  	name: mcrtValues[6].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -315,7 +359,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[6]
 	  },
 	  {
-	  	name: "12",
+	  	name: mcrtValues[7].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -323,7 +367,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[7]
 	  },
 	  {
-	  	name: "13",
+	  	name: mcrtValues[8].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -331,7 +375,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[8]
 	  },
 	  {
-	  	name: "14",
+	  	name: mcrtValues[9].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",
@@ -339,7 +383,7 @@ function renderGraph(DataArray){
 	    dataPoints: DataArray[9]
 	  },
 	  {
-	  	name: "15",
+	  	name: mcrtValues[10].toString(),
 	    yValueFormatString: "#,### Units",
 	    xValueFormatString: "YYYY",
 	    type: "spline",

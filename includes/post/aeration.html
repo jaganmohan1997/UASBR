@@ -193,6 +193,7 @@
 
 						        <button type="button" class="btn btn-success" onclick="post_extended()">Calculate</button>
 						        </form>
+                    <button style="width: 150px;" type="button" class="btn btn-success" onclick="optimize_post('extended')">Use Optimization</button>
 						      </div>
 						      <div class="col-md-6">
 						      <h4 class="input">Output</h4>
@@ -282,6 +283,7 @@
     <script src="../../assets/js/jquery-2.1.1.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/post.js"></script>
+    <script src="../../assets/js/canvasjs.min.js"></script>
     <script>
     $(document).ready(function(){
       $("#lt").click(function() {
@@ -343,6 +345,24 @@
               <b style="padding-left:5px; padding-right: 5px;">OR</b>
               <a id="ow" href="aeration.html" class="btn btn-info">Extented Aeration</a>
             </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Optimization modal -->
+    <div id="optimize" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Optimization Graph</h4>
+          </div>
+          <div class="modal-body">
+            <div id="chartContainer" style="height: 370px; width: 100%;"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
@@ -451,6 +471,23 @@
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.Error modal -->
+
+    <!-- Loading modal -->
+    <div id="loading" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header o-nav">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Please Wait ... </h4>
+          </div>
+          <div class="progress progress-striped active" style="margin-bottom:0;">
+            <div class="progress-bar" style="width: 100%">
+            </div>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.Loading modal -->
+
   </footer>
 
 </body>
